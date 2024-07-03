@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vani</title>
+  <style>
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ee8dbc;
+    }
+    .container {
+        max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #598ce4;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #f9f7f5;
+      color: #1b0101;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #00b7f9;
+    }
+    .poem-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    .poem-item {
+      margin-bottom: 10px;
+      background-color: #f7f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .poem-item:hover {
+      background-color: #e2e2e2;
+    }
+    .poem-title {
+      font-size: 18px;
+      color: #333;
+      margin: 0;
+    }
+    .poem-content {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    footer {
+      background-color: #f4d6e4;
+      color: #0b0000;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+    /* .poem-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .poem-list li {
+      margin-bottom: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .poem-list li:hover {
+      background-color: #f0f0f0;
+    }
+    .poem-title {
+      font-size: 18px;
+      color: #333;
+      margin: 0;
+    }
+    .poem-content {
+      display: none;
+      margin-top: 10px;
+    } */
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome</h1>
+    <button id="welcomeButton">Click Me ❤️</button>
+    <div id="poemList" style="display:none;">
+      <h2>Vani Kulshreshtha</h2>
+      <ul class="poem-list">
+        <li class="poem-item" data-poem="poem1">1.🫶</li>
+        <li class="poem-item" data-poem="poem2">2.Q/A</li>
+      </ul>
+    </div>
+    <div id="poemContainer" style="display:none;">
+      <h2 id="poemTitle"></h2>
+      <div id="poemContent"></div>
+    </div>
+  </div>
+  <footer>
+    <p>PRADYUMN MITTAL <br>
+        Phone No.: 8126249146 <br>
+        Snap: mittal_pradyumn</p>
+  </footer>
+  <script>
+    document.getElementById('welcomeButton').addEventListener('click', function() {
+      document.getElementById('welcomeButton').style.display = 'none';
+      document.getElementById('poemList').style.display = 'block';
+    });
+
+    const poems = {
+      poem1: {
+        title: '🫶',
+        content: `Hey Vani,
+        I don't know when you'd even see this message so here it goes
+        Mei aaj hi apne friend se keh raha tha ki saalo baad dil se khush hu by khush I mean where I'm always smiling, where I want to dance alone, have all the fun. I thought of the reason ki why it's happening itne dino se and I came to the conclusion that reason is you princess ❤ The way you make me happy, make me blush, gussa hoti merese all these things matter so much to me. Humari baat idk ek month hui hogi and I swear you know the things about me which 1-2people know about  me. You make me feel wanted and special. I'm not a perfect person I know but I know one thing I want to become perfect for you.  
+        You're the person I never want to lose like ever. Pehle all I did was hiding everything about everything but I don't want to make the same mistake again and wait till it's too late. 
+
+        You know na what I'm saying I'm so bad at expressing myself. 
+        I love you, yes I do very very very much, Princess ❤️. 
+        You're my matured, caring, funny, nakchiddi, understanding, ambitious cutiepie rare Princess.
+        I want you to be beside me everywhere in my life as I wish to be beside you too. I know we both are complicated people but the thing is we're very much alike and for the first time in my life I'm so confident for someone ki haan hum karlenge sab. I know you told ki we'll be friends but yaar how can someone not fall for you. 
+        I don't know if what I'm doing is right or wrong, I'm just expressing my heart out.
+
+        Vani Kulshreshtha with an extra 'H' you really are like a storm cause you make my heart panic.       
+        Will you be "mine" humesha ke liye?`
+      },
+      poem2: {
+        title: 'Q/A',
+        content: `You've read the above and there are lots of questions in your mind I know those questions so I'll answer for you 
+        My answers to your questions:
+        1. You're scared that if it doesn't work out then both of us will be hurt and everything between us would end. But Vani like I said there's nothing impossible if we communicate and I can promise I'm never gonna leave you because I can't. Agar hum dono iss darr mei hi jeete rahe toh maybe we'll leave something that would be very precious for us. Toh I need you to trust me on this because I believe we can and we will. And the thought of you being sad makes me want to cry. I want you to be happy with me and I want to do everything I can to get that damned smile on your face. 
+
+        2. You think ki if we're together you may not remain on the same path and that you won't focus on your career because of me. The thing I like about you ki you're focused towards it and I want ki tum focused raho humesha aise. Vani I can promise you that I'll be the person clapping at your success. I want to be the person who's not a hindrance to you but the person who helps you to succeed. I'd never ask you to be your no. 1 priority because it should be your future. So dw on these things kyuki mei bhi ab job karta hu and I know you too so.........
+
+        3. We haven't met abhi tak toh why am I doing this ya am I being too fast. The reason is Vani the way I have felt for you I have never ever had that feeling before. You make me feel special. You complete me and I've never been so sure about something before so that's the reason I wanna be with you humesha. You bring out the kid in me. 
+
+        I know a lot will be going on in your mind after reading this. I'm there to answer all your questions. Don't overthink Pradyumn is here for you with you.`
+      }
+    };
+
+    const poemItems = document.querySelectorAll('.poem-item');
+    poemItems.forEach(function(item) {
+      item.addEventListener('click', function() {
+        const poemId = this.getAttribute('data-poem');
+        document.getElementById('poemTitle').innerText = poems[poemId].title;
+        document.getElementById('poemContent').innerText = poems[poemId].content;
+        document.getElementById('poemContainer').style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
